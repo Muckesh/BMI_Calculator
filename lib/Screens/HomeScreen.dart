@@ -85,6 +85,47 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: primaryColor),
               ),
             ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              child: Text(
+                "10",
+                style: TextStyle(fontSize: 90, color: primaryColor),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Container(
+              child: Text(
+                "Normal Weight",
+                style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w400,
+                    color: primaryColor),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            RightBar(barwidth: 40),
+            SizedBox(
+              height: 20,
+            ),
+            RightBar(barwidth: 80),
+            SizedBox(
+              height: 20,
+            ),
+            RightBar(barwidth: 40),
+            SizedBox(
+              height: 20,
+            ),
+            LeftBart(barwidth: 70),
+            SizedBox(
+              height: 20,
+            ),
+            LeftBart(barwidth: 70),
           ],
         ),
       ),
