@@ -2,7 +2,4 @@
 
 A new Flutter project.
 
-## Getting Started
-
-"# BMI_Calculator" 
-"# BMI_Calculator" 
+<img src="https://github.com/Muckesh/BMI_Calculator/blob/main/screenshots/Screenshot_1.png" width="128"/>
