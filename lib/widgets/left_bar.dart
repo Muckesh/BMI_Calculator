@@ -14,7 +14,7 @@ class LeftBart extends StatelessWidget {
           height: 25,
           width: barwidth,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topRight: Radius.circular(20),
               bottomRight: Radius.circular(20),
             ),

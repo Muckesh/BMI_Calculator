@@ -11,8 +11,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController _heightController = TextEditingController();
-  TextEditingController _weightController = TextEditingController();
+  final TextEditingController _heightController = TextEditingController();
+  final TextEditingController _weightController = TextEditingController();
   double _bmi = 0;
   String _bmiResult = "";
 
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 130,
                       child: TextField(
                         controller: _heightController,
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 130,
                       child: TextField(
                         controller: _weightController,
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             GestureDetector(
@@ -115,60 +115,54 @@ class _HomeScreenState extends State<HomeScreen> {
                   }
                 });
               },
-              child: Container(
-                child: Text(
-                  "Calculate",
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor),
-                ),
+              child: Text(
+                "Calculate",
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            Container(
-              child: Text(
-                _bmi.toStringAsFixed(2),
-                style: TextStyle(fontSize: 70, color: primaryColor),
-              ),
+            Text(
+              _bmi.toStringAsFixed(2),
+              style: TextStyle(fontSize: 70, color: primaryColor),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Visibility(
               visible: _bmiResult.isNotEmpty,
-              child: Container(
-                child: Text(
-                  _bmiResult,
-                  style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700,
-                      color: primaryColor),
-                ),
+              child: Text(
+                _bmiResult,
+                style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
+                    color: primaryColor),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            RightBar(barwidth: 40),
-            SizedBox(
+            const RightBar(barwidth: 40),
+            const SizedBox(
               height: 20,
             ),
-            RightBar(barwidth: 80),
-            SizedBox(
+            const RightBar(barwidth: 80),
+            const SizedBox(
               height: 20,
             ),
-            RightBar(barwidth: 40),
-            SizedBox(
+            const RightBar(barwidth: 40),
+            const SizedBox(
               height: 20,
             ),
-            LeftBart(barwidth: 70),
-            SizedBox(
+            const LeftBart(barwidth: 70),
+            const SizedBox(
               height: 20,
             ),
-            LeftBart(barwidth: 70),
+            const LeftBart(barwidth: 70),
           ],
         ),
       ),
